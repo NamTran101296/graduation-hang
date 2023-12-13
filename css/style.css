@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+}
+
+.home {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.home__bg {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    background: #9575cd;
+}
+
+.home__bg-firework {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.home__cart {
+    border-radius: 32px;
+    background: #fffaf0;
+    position: fixed;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    border: 2px solid #000;
+    box-shadow: 7px 7px #000;
+}
+
+.home__cart .box {
+    position: relative;
+    max-width: 90vw;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    padding: 40px;
+}
+
+.home__cart .svg_0 {
+    position: absolute;
+    width: 80.9949px;
+    height: 181.591px;
+    transform: translate(-11.4095px, -18.438px) rotate(33.8566deg);
+    top: 0;
+    left: 16px;
+}
+
+.home__cart .svg_1 {
+    width: 80.9949px;
+    height: 181.591px;
+    transform: rotate(-132.619deg);
+    position: absolute;
+    bottom: -20px;
+    right: 16px;
+}
+
+.home__cart video {
+    width: 220px;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.home__cart .content {
+    flex: 1;
+    margin-left: 20px;
+    text-align: center;
+    color: #242323;
+    pointer-events: none;
+}
+
+.home__cart .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+}
+
+.home__cart .name {
+    font-family: 'Gistesy', sans-serif;
+    font-size: 30px;
+    transform: rotateZ(-8deg);
+    padding: 30px 0;
+}
+
+.home__cart .branch {
+    font-family: 'Noto Serif', serif;
+    text-transform: uppercase;
+}
+
+.home__cart .class {
+    font-family: 'EB Garamond', serif;
+    color: #bfb683;
+    margin: 20px 0;
+    position: relative;
+}
+
+.home__cart .class:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 140px;
+    background-color: #bfb683;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home__cart .class span {
+    padding: 0 16px;
+    background: #fffaf0;
+    position: relative;
+}
+
+.home__cart .school {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#bee {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+}
+
+.medal {
+    width: 160px;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.cat {
+    width: 160px;
+    height: auto;
+    top: -111px;
+    left: 0;
+    position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+    .home__cart video {
+        width: 180px;
+    }
+    #bee {
+        display: none;
+    }
+    .home__cart .box {
+        display: block;
+        text-align: center;
+        padding: 30px 0;
+        min-width: 100%;
+    }
+    .home__cart {
+        top: inherit;
+        bottom: 0;
+        width: 100%;
+    }
+    .home__cart .content {
+        margin: 10px 0 0;
+    }
+    .home__cart .title {
+        font-size: 20px;
+    }
+    .home__cart .name {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+    .class {
+        font-size: 12px;
+    }
+    .school {
+        font-size: 12px;
+    }
+    .medal {
+        width: 100px;
+    }
+}

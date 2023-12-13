@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+            name="viewport"
+            content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (ctx.mode.cordova || ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>"
+    />
+
+    <!-- Primary Meta Tags -->
+    <title>Thư mời tốt nghiệp</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/gistesy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=EB+Garamond&family=Noto+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+<div class="home">
+    <div class="home__bg">
+        <div class="home__bg-firework">
+            <dotlottie-player class="medal" src="./imgs/medal.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+            <dotlottie-player src="./imgs/firework.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        </div>
+
+        <div class="home__cart">
+            <dotlottie-player class="cat" src="https://lottie.host/2327370e-67b2-4731-b986-91bac01e6cbc/A37lQVbZRC.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+            <div class="box">
+                <img class="svg_0" src="./imgs/flower.svg" />
+                <img class="svg_1" src="./imgs/flower.svg" />
+
+                <video src="./imgs/video.mp4" loop autoplay muted></video>
+
+                <div class="content">
+                    <div class="title">
+                        Graduation
+                    </div>
+                    <div class="name">
+                        Vu Thi Thu Hang
+                    </div>
+
+                    <div class="branch">
+                        9:00AM - DEC 17
+                    </div>
+
+                    <div class="class">
+                        <span>K19</span>
+                    </div>
+
+                    <div class="school">
+                        University <br>
+                        of <br>
+                        Natural Sciences
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="bee" width="100" height="100"></canvas>
+    </div>
+
+    <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+    <script>
+        const r = new rive.Rive({
+            src: "./imgs/bee_and_clouds_scroll.riv",
+            canvas: document.getElementById("bee"),
+            autoplay: true,
+            stateMachines: "State Machine",
+            onLoad: () => {
+                r.resizeDrawingSurfaceToCanvas();
+            },
+        });
+    </script>
+</div>
+</body>
+</html>
